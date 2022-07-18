@@ -1,0 +1,26 @@
+7(a):
+import  string
+import random
+def getRandomLowerCaseLetter():
+	var1=string.ascii_letters.lower()
+	chars=[]
+	for i  in range(0,100):
+		chars.append(random.choice(var1))
+	return (chars)
+7(b):
+import RandomCharacterModule
+chars=RandomCharacterModule.getRandomLowerCaseLetter()
+print('list chars with random characters:')
+print(chars)
+counts=[]
+
+def countX(chars,x):
+	count=0
+	for ele in chars:
+		 if(ele==x):
+		   count=count+1
+	return count
+		
+for i in range(97,123):
+	counts.append(countX(chars,chr(i)))
+print('count of each character in list chars is:\n',counts)
